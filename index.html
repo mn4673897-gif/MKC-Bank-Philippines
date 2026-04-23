@@ -4,229 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MKC Bank_BSBA 2A</title>
-    <style>
-        :root {
-            --gold: #c5a059;
-            --navy: #0a192f;
-            --bg: #020617;
-            --sidebar-w: 280px;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, sans-serif;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        body {
-            background: var(--bg);
-            color: #f1f5f9;
-            min-height: 100vh;
-            display: flex;
-            overflow-x: hidden;
-        }
-
-        /* --- THE MASTER NAVIGATION --- */
-        nav {
-            width: var(--sidebar-w);
-            background: #000;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 2000;
-            border-right: 1px solid var(--border);
-            padding: 90px 20px 20px 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* --- MOBILE BEHAVIOR (FIXES YOUR SCREENSHOT) --- */
-        @media (max-width: 768px) {
-            nav {
-                left: -100%;
-                /* Hide off-screen so content isn't squeezed */
-                width: 85%;
-                box-shadow: 20px 0 60px rgba(0, 0, 0, 0.9);
-            }
-
-            nav.active {
-                left: 0;
-            }
-
-            /* Slides in OVER the content */
-            main {
-                margin-left: 0 !important;
-                padding: 100px 20px !important;
-            }
-        }
-
-        /* --- DESKTOP BEHAVIOR --- */
-        @media (min-width: 769px) {
-            nav.collapsed {
-                left: calc(var(--sidebar-w) * -1);
-            }
-
-            main.maximized {
-                margin-left: 0 !important;
-            }
-        }
-
-        /* FLOATING TOGGLE BUTTON */
-        .master-toggle {
-            position: fixed;
-            top: 25px;
-            left: 25px;
-            z-index: 3000;
-            background: var(--gold);
-            color: #000;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 1.5rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .brand-section {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .brand-section h2 {
-            color: var(--gold);
-            font-size: 1.4rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            list-style: none;
-            flex-grow: 1;
-        }
-
-        .nav-links li {
-            margin-bottom: 8px;
-        }
-
-        .nav-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            cursor: pointer;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            background: var(--glass);
-            color: #fff;
-            border-left: 4px solid var(--gold);
-        }
-
-        .icon {
-            min-width: 45px;
-            font-size: 1.2rem;
-        }
-
-        /* --- CONTENT AREA --- */
-        main {
-            flex: 1;
-            margin-left: var(--sidebar-w);
-            padding: 100px 60px;
-            transition: margin-left 0.4s ease;
-        }
-
-        .view {
-            display: none;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        .view.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .card {
-            background: var(--glass);
-            border: 1px solid var(--border);
-            padding: 30px;
-            border-radius: 24px;
-            backdrop-filter: blur(10px);
-        }
-
-        .card h3 {
-            color: var(--gold);
-            margin-bottom: 15px;
-            font-size: 1rem;
-            text-transform: uppercase;
-        }
-
-        .card p,
-        .card li {
-            color: #94a3b8;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .table-box {
-            overflow-x: auto;
-            background: var(--glass);
-            padding: 25px;
-            border-radius: 24px;
-            border: 1px solid var(--border);
-            margin-top: 30px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 600px;
-        }
-
-        th {
-            text-align: left;
-            padding: 15px;
-            color: #64748b;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-        }
-
-        td {
-            padding: 15px;
-            border-top: 1px solid var(--border);
-        }
-    </style>
+    <title>MKC Bank Philippines — Corporate Portfolio</title>
+    <meta name="description"
+        content="MKC Bank Philippines Inc. — A new generation universal bank empowering Filipinos with innovative financial solutions.">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -236,151 +17,307 @@
     <nav id="sidebar">
         <div class="brand-section">
             <h2>MKC BANK</h2>
-            <p style="font-size: 0.6rem; color: #64748b; letter-spacing: 2px;">PHILIPPINES</p>
+            <p>PHILIPPINES</p>
         </div>
         <ul class="nav-links">
-            <li><a onclick="switchView('v1')" id="l1" class="active"><span class="icon">🏠</span> <span>(a-c)
-                        Identity</span></a></li>
-            <li><a onclick="switchView('v2')" id="l2"><span class="icon">📜</span> <span>(d-f) Profile</span></a></li>
-            <li><a onclick="switchView('v3')" id="l3"><span class="icon">🌍</span> <span>(g-k) Operations</span></a>
+            <li><a onclick="switchView('v1')" id="l1" class="active"><span class="icon">🏠</span><span>Home</span></a>
             </li>
-            <li><a onclick="switchView('v4')" id="l4"><span class="icon">👔</span> <span>(l-p) Governance</span></a>
+            <li><a onclick="switchView('v2')" id="l2"><span class="icon">📜</span><span>Corporate Profile</span></a>
             </li>
-            <li><a onclick="switchView('v5')" id="l5"><span class="icon">📈</span> <span>(q-r) Performance</span></a>
-            </li>
+            <li><a onclick="switchView('v3')" id="l3"><span class="icon">🌍</span><span>Operations</span></a></li>
+            <li><a onclick="switchView('v4')" id="l4"><span class="icon">👔</span><span>Leadership</span></a></li>
+            <li><a onclick="switchView('v5')" id="l5"><span class="icon">📈</span><span>Performance</span></a></li>
         </ul>
     </nav>
 
     <main id="main">
+
+        <!-- ===== VIEW 1: HOME ===== -->
         <div id="v1" class="view active">
-            <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Institutional Identity</h1>
-            <div class="grid">
+            <div class="hero">
+                <span class="hero-badge">🏦 EST. 2025 — NEW GENERATION BANKING</span>
+                <h1>MKC Bank Philippines, Inc.</h1>
+                <p>Welcome to MKC Bank — a bold, new-generation universal bank built from the ground up to redefine
+                    Filipino banking. Founded by three visionary entrepreneurs, MKC Bank combines cutting-edge digital
+                    technology with a deep commitment to community empowerment, financial inclusion, and world-class
+                    service. We are not just a bank — we are the future of Philippine finance.</p>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Founders & Owners</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">10</div>
+                    <div class="stat-label">Board Directors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">50+</div>
+                    <div class="stat-label">Branches Nationwide</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">₱12B</div>
+                    <div class="stat-label">Initial Capitalization</div>
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top:30px;">
                 <div class="card">
-                    <h3>(a) Company Name</h3>
+                    <h3>🏷️ Company Name</h3>
                     <p>MKC Bank Philippines, Inc.</p>
                 </div>
                 <div class="card">
-                    <h3>(b) Logo</h3>
-                    <p>Gold Crown and Bridge (Stability & Prestige).</p>
+                    <h3>🎨 Logo & Identity</h3>
+                    <p>Blue Crown & Shield — Symbolizing trust, innovation, and Filipino resilience in the new era of
+                        banking.</p>
                 </div>
                 <div class="card">
-                    <h3>(c) Tagline</h3>
-                    <p>"Excellence in Every Transaction."</p>
+                    <h3>💬 Tagline</h3>
+                    <p>"Building Tomorrow's Wealth, Today."</p>
                 </div>
             </div>
         </div>
 
+        <!-- ===== VIEW 2: CORPORATE PROFILE ===== -->
         <div id="v2" class="view">
-            <h1>(d-f) Corporate Profile</h1>
-            <div class="card" style="margin-top: 25px;">
-                <h3>(d) History & Background</h3>
-                <p>Founded in 1995. Headquartered at Ayala Ave, Makati City. Transitioned to a Universal Bank in 2015.
-                </p>
+            <div class="hero">
+                <span class="hero-badge">📋 CORPORATE PROFILE</span>
+                <h1>About MKC Bank</h1>
+                <p>A pioneering institution born from the ambition to create a smarter, more accessible banking
+                    experience for every Filipino.</p>
             </div>
+
+            <div class="card" style="margin-top:25px;">
+                <h3>(d) History & Background</h3>
+                <p>MKC Bank Philippines, Inc. was established in 2025 by three young and ambitious Filipino
+                    entrepreneurs — Mike Jason Monte, Christian H. Balibagoso, and Christian H. Balibagoso — who shared
+                    a common vision: to build a bank that truly serves the modern Filipino. Headquartered in Makati
+                    City, the bank launched with an initial capitalization of ₱12 Billion and quickly gained BSP
+                    approval as a Universal Bank. Within its first year, MKC Bank opened 50 branches across Luzon,
+                    Visayas, and Mindanao, with aggressive expansion plans to reach 200 branches by 2028.</p>
+            </div>
+
             <div class="grid">
                 <div class="card">
                     <h3>(e) Subsidiaries</h3>
-                    <p>MKC Capital, MKC Life Insurance, MKC Digital Realty.</p>
+                    <p>MKC Capital Markets Corp., MKC Digital Pay Inc., MKC Insurance Holdings, MKC Micro-Lending Corp.
+                    </p>
                 </div>
                 <div class="card">
                     <h3>(f) Vision</h3>
-                    <p>To empower every Filipino family with global financial solutions.</p>
+                    <p>To become the Philippines' most innovative and trusted bank, empowering every Filipino family to
+                        achieve financial freedom through technology-driven solutions.</p>
+                </div>
+                <div class="card">
+                    <h3>Mission</h3>
+                    <p>To deliver accessible, transparent, and cutting-edge financial services that uplift communities,
+                        drive economic growth, and set new standards in Philippine banking.</p>
                 </div>
             </div>
         </div>
 
+        <!-- ===== VIEW 3: OPERATIONS ===== -->
         <div id="v3" class="view">
-            <h1>(g-k) Scope of Operations</h1>
+            <div class="hero">
+                <span class="hero-badge">🌍 SCOPE OF OPERATIONS</span>
+                <h1>Operations & Reach</h1>
+                <p>Rapidly expanding nationwide with digital-first strategies and community-centered banking.</p>
+            </div>
+
             <div class="grid">
                 <div class="card">
                     <h3>(g) Branches</h3>
-                    <p>1,120 Branches Nationwide.</p>
+                    <p>50+ branches across Luzon, Visayas, and Mindanao with plans to reach 200 by 2028.</p>
                 </div>
                 <div class="card">
-                    <h3>(h) Scope</h3>
-                    <p>Retail, SME, and Investment Banking.</p>
+                    <h3>(h) Scope of Banking</h3>
+                    <p>Universal Banking — Retail, Commercial, SME, Digital, and Investment Banking services.</p>
                 </div>
                 <div class="card">
-                    <h3>(i) Products</h3>
-                    <p>Savings, Loans, Remittance, Insurance.</p>
+                    <h3>(i) Products & Services</h3>
+                    <p>Savings & Checking Accounts, Personal & Business Loans, Credit Cards, Mobile Banking (MKC App),
+                        Insurance, Investments, Remittance Services.</p>
                 </div>
                 <div class="card">
-                    <h3>(j) Assets</h3>
-                    <p>₱4.82 Trillion Total Assets.</p>
+                    <h3>(j) Total Assets</h3>
+                    <p>₱18.5 Billion in total assets (2025) — growing rapidly through strategic partnerships and digital
+                        innovation.</p>
                 </div>
                 <div class="card">
-                    <h3>(k) Awards</h3>
-                    <p>Best Digital Bank (2024), Trusted Brand Award (2025).</p>
+                    <h3>(k) Awards & Recognition</h3>
+                    <p>Most Promising New Bank 2025 (BSP), Digital Innovation Award 2025 (FinTech PH), Best New Banking
+                        App 2025.</p>
                 </div>
             </div>
         </div>
 
+        <!-- ===== VIEW 4: LEADERSHIP ===== -->
         <div id="v4" class="view">
-            <h1>(l-p) Leadership</h1>
-            <div class="grid">
+            <div class="hero">
+                <span class="hero-badge">👔 GOVERNANCE & LEADERSHIP</span>
+                <h1>Our Leaders</h1>
+                <p>Meet the founders, owners, and board of directors driving MKC Bank's vision forward.</p>
+            </div>
+
+            <!-- OWNERS -->
+            <h2 class="section-title">🏅 Bank Owners & Founders</h2>
+            <div class="owner-grid">
+                <div class="owner-card">
+                    <img src="images/owner1.jpg" alt="Mike Jason Monte" class="owner-photo">
+                    <h3>Mike Jason Monte</h3>
+                    <div class="role">Chairman & Co-Founder</div>
+                </div>
+                <div class="owner-card">
+                    <img src="images/owner2.jpg" alt="Christian H. Balibagoso" class="owner-photo">
+                    <h3>Christian H. Balibagoso</h3>
+                    <div class="role">President & Co-Founder</div>
+                </div>
+                <div class="owner-card">
+                    <img src="images/owner3.jpg" alt="Christian H. Balibagoso" class="owner-photo">
+                    <h3>Christian H. Balibagoso</h3>
+                    <div class="role">CEO & Co-Founder</div>
+                </div>
+            </div>
+
+            <!-- DIRECTORS -->
+            <h2 class="section-title">📋 Board of Directors</h2>
+            <div class="director-grid">
+                <div class="director-card">
+                    <div class="director-avatar">RA</div>
+                    <h4>Roberto A. Alvarez</h4>
+                    <div class="dir-role">Independent Director</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">ML</div>
+                    <h4>Maria Lucia S. Tan</h4>
+                    <div class="dir-role">Corporate Secretary</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">JD</div>
+                    <h4>Jose David R. Cruz</h4>
+                    <div class="dir-role">Risk Management Director</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">AC</div>
+                    <h4>Angela C. Reyes</h4>
+                    <div class="dir-role">Compliance Director</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">PG</div>
+                    <h4>Patrick G. Santos</h4>
+                    <div class="dir-role">Finance Director</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">LS</div>
+                    <h4>Liza S. Mendoza</h4>
+                    <div class="dir-role">Technology Director</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">EM</div>
+                    <h4>Eduardo M. Villanueva</h4>
+                    <div class="dir-role">Operations Director</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">CR</div>
+                    <h4>Carmen R. De Leon</h4>
+                    <div class="dir-role">Marketing Director</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">FT</div>
+                    <h4>Francisco T. Garcia</h4>
+                    <div class="dir-role">Legal Counsel Director</div>
+                </div>
+                <div class="director-card">
+                    <div class="director-avatar">SB</div>
+                    <h4>Sofia B. Lim</h4>
+                    <div class="dir-role">HR & Admin Director</div>
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top:30px;">
                 <div class="card">
-                    <h3>(l) Org Structure</h3>
-                    <p>Functional Matrix Governance.</p>
+                    <h3>(l) Organizational Structure</h3>
+                    <p>Modern flat-matrix governance model promoting agile decision-making, transparency, and
+                        accountability across all divisions.</p>
                 </div>
                 <div class="card">
-                    <h3>(m) Board</h3>
-                    <p>Chaired by Maria K. Cruz.</p>
-                </div>
-                <div class="card">
-                    <h3>(o) CAR</h3>
-                    <p>14.6% Capital Adequacy Ratio.</p>
+                    <h3>(o) Capital Adequacy Ratio</h3>
+                    <p>16.2% CAR — well above the BSP minimum requirement of 10%, ensuring financial stability and
+                        depositor confidence.</p>
                 </div>
             </div>
         </div>
 
+        <!-- ===== VIEW 5: PERFORMANCE ===== -->
         <div id="v5" class="view">
-            <h1>(q-r) Performance</h1>
-            <div class="card">
-                <h3>(q) CSR Initiatives</h3>
-                <p>1. Financial Literacy, 2. SME Grants, 3. Clean Water, 4. Reforestation, 5. Medical Missions.</p>
+            <div class="hero">
+                <span class="hero-badge">📈 FINANCIAL PERFORMANCE</span>
+                <h1>Growth & Impact</h1>
+                <p>Tracking our ambitious first years as we build a legacy of excellence in Philippine banking.</p>
             </div>
+
+            <div class="card" style="margin-top:25px;">
+                <h3>(q) CSR Initiatives</h3>
+                <p>1. Financial Literacy Programs for underserved communities 2. SME Startup Grants 3. Clean Water
+                    Projects 4. Reforestation Drives 5. Free Medical Missions in rural areas</p>
+            </div>
+
             <div class="table-box">
-                <h3>(r) 3-Year Report</h3>
+                <h3
+                    style="color:var(--primary);margin-bottom:15px;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">
+                    (r) Projected 3-Year Financial Report</h3>
                 <table>
                     <thead>
                         <tr>
                             <th>Metric</th>
-                            <th>2023</th>
-                            <th>2024</th>
                             <th>2025</th>
+                            <th>2026 (Proj.)</th>
+                            <th>2027 (Proj.)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Net Income</td>
-                            <td>₱72.4B</td>
-                            <td>₱84.5B</td>
-                            <td>₱91.0B</td>
+                            <td>₱1.2B</td>
+                            <td>₱3.8B</td>
+                            <td>₱7.5B</td>
                         </tr>
                         <tr>
-                            <td>Assets</td>
-                            <td>₱4.1T</td>
-                            <td>₱4.8T</td>
-                            <td>₱5.2T</td>
+                            <td>Total Assets</td>
+                            <td>₱18.5B</td>
+                            <td>₱32B</td>
+                            <td>₱55B</td>
+                        </tr>
+                        <tr>
+                            <td>Branches</td>
+                            <td>50</td>
+                            <td>120</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Customers</td>
+                            <td>250K</td>
+                            <td>800K</td>
+                            <td>2M</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+
+        <div class="footer-note">
+            &copy; 2025 MKC Bank Philippines, Inc. — BSBA 2A | All Rights Reserved
+        </div>
+
     </main>
 
     <script>
         function handleToggle() {
-            const nav = document.getElementById('sidebar');
-            const main = document.getElementById('main');
-            if (window.innerWidth <= 768) {
-                nav.classList.toggle('active');
-            } else {
-                nav.classList.toggle('collapsed');
-                main.classList.toggle('maximized');
-            }
+            const nav = document.getElementById('sidebar'), main = document.getElementById('main');
+            if (window.innerWidth <= 768) { nav.classList.toggle('active'); }
+            else { nav.classList.toggle('collapsed'); main.classList.toggle('maximized'); }
         }
-
         function switchView(id) {
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
             document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
