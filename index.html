@@ -92,7 +92,7 @@
             <div class="card" style="margin-top:25px;">
                 <h3> History & Background</h3>
                 <p>MKC Bank Philippines, Inc. was established in 2025 by three young and ambitious Filipino
-                    entrepreneurs — Mike Jason Monte, Karl Joseph  T. Palma , and Christian H. Balibagoso — who shared
+                    entrepreneurs — Mike Jason Monte, Christian H. Balibagoso, and Christian H. Balibagoso — who shared
                     a common vision: to build a bank that truly serves the modern Filipino. Headquartered in Makati
                     City, the bank launched with an initial capitalization of ₱12 Billion and quickly gained BSP
                     approval as a Universal Bank. Within its first year, MKC Bank opened 50 branches across Luzon,
@@ -129,8 +129,13 @@
             <div class="grid">
                 <div class="card">
                     <h3>📍 Nationwide Branches</h3>
+                    <div class="branch-tabs mobile-only">
+                        <button class="branch-tab active" onclick="showBranchRegion('luzon')">Luzon</button>
+                        <button class="branch-tab" onclick="showBranchRegion('visayas')">Visayas</button>
+                        <button class="branch-tab" onclick="showBranchRegion('mindanao')">Mindanao</button>
+                    </div>
                     <div class="branch-scroll-container">
-                        <div class="branch-region">
+                        <div id="br-luzon" class="branch-region active">
                             <h4>Luzon (25 Branches)</h4>
                             <div class="branch-item">
                                 <p><strong>Makati Head Office:</strong> 123 Ayala Ave, Makati City<br>Contact: (02)
@@ -214,7 +219,7 @@
                                 <p><strong>Naga City:</strong> Elias Angeles St<br>Contact: (054) 473-0007</p>
                             </div>
                         </div>
-                        <div class="branch-region">
+                        <div id="br-visayas" class="branch-region">
                             <h4>Visayas (12 Branches)</h4>
                             <div class="branch-item">
                                 <p><strong>Cebu IT Park:</strong> Apas, Cebu City<br>Contact: (032) 412-9001</p>
@@ -254,7 +259,7 @@
                                 <p><strong>Kalibo:</strong> Pastrana St, Aklan<br>Contact: (036) 268-0004</p>
                             </div>
                         </div>
-                        <div class="branch-region">
+                        <div id="br-mindanao" class="branch-region">
                             <h4>Mindanao (13 Branches)</h4>
                             <div class="branch-item">
                                 <p><strong>Davao City:</strong> SM Lanang Premier<br>Contact: (082) 221-3456</p>
@@ -338,13 +343,22 @@
                 </div>
                 <div class="card" style="grid-column: 1 / -1;">
                     <h3>Awards & Recognition</h3>
-                    <div class="awards-flex">
-                        <img src="Screenshot 2026-04-29 230652.png">
-                        <div>
-                            <h4>Most Promising New Bank 2025 (BSP)</h4>
-                            <p>Awarded for outstanding capitalization and rapid nationwide deployment.</p>
-                            <h4 style="margin-top:10px;">Digital Innovation Award 2025 (FinTech PH)</h4>
-                            <p>Recognized for the cutting-edge MKC Mobile App UI and security.</p>
+                    <div class="awards-container">
+                        <div class="award-item">
+                            <img src="award1_1777435245814.png" alt="Most Promising New Bank" class="award-img">
+                            <div class="award-text">
+                                <h4>Most Promising New Bank 2025</h4>
+                                <span class="award-issuer">Bangko Sentral ng Pilipinas (BSP)</span>
+                                <p>Awarded for outstanding capitalization and rapid nationwide deployment.</p>
+                            </div>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-icon">🏆</div>
+                            <div class="award-text">
+                                <h4>Digital Innovation Award 2025</h4>
+                                <span class="award-issuer">FinTech Philippines</span>
+                                <p>Recognized for the cutting-edge MKC Mobile App UI and security.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1084,6 +1098,19 @@
             document.getElementById('calc-result').style.display = 'block';
             document.getElementById('calc-result').style.animation = 'fadeIn 0.5s ease forwards';
         }
+
+        function showBranchRegion(regionId) {
+            // Hide all regions
+            document.querySelectorAll('.branch-region').forEach(reg => reg.classList.remove('active'));
+            // Remove active class from all tabs
+            document.querySelectorAll('.branch-tab').forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected region
+            document.getElementById('br-' + regionId).classList.add('active');
+            // Set active tab
+            event.currentTarget.classList.add('active');
+        }
+
     </script>
 </body>
 
