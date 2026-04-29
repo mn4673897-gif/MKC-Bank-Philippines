@@ -345,7 +345,7 @@
                     <h3>Awards & Recognition</h3>
                     <div class="awards-container">
                         <div class="award-item">
-                            <img src="Screenshot2026-04-29230652.png">
+                            <img src="Screenshot2026-04-29230652.png" alt="Most Promising New Bank" class="award-img">
                             <div class="award-text">
                                 <h4>Most Promising New Bank 2025</h4>
                                 <span class="award-issuer">Bangko Sentral ng Pilipinas (BSP)</span>
@@ -658,7 +658,7 @@
                     Projected 3-Year Financial Report</h3>
 
                 <!-- Chart Container -->
-                <div class="chart-container" style="position: relative; height:250px; width:100%; margin-bottom: 30px;">
+                <div class="chart-container" style="position: relative; width:100%; margin-bottom: 30px;">
                     <canvas id="financialChart"></canvas>
                 </div>
 
@@ -787,7 +787,8 @@
                             style="font-size: 2rem; font-weight: 900; color: var(--primary); margin-top: 5px;">
                             ₱10,400.00</div>
                         <div style="font-size: 0.8rem; color: #10b981; font-weight: 600; margin-top: 4px;">You earned
-                            <span id="res-interest">₱400.00</span> in interest!</div>
+                            <span id="res-interest">₱400.00</span> in interest!
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1104,7 +1105,7 @@
             document.querySelectorAll('.branch-region').forEach(reg => reg.classList.remove('active'));
             // Remove active class from all tabs
             document.querySelectorAll('.branch-tab').forEach(tab => tab.classList.remove('active'));
-            
+
             // Show selected region
             document.getElementById('br-' + regionId).classList.add('active');
             // Set active tab
