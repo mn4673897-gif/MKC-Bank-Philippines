@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <!-- Live Background Canvas -->
+    <canvas id="live-bg"></canvas>
+
     <!-- Animated Background Orbs -->
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
@@ -20,7 +23,7 @@
 
     <nav id="sidebar">
         <div class="brand-section">
-            <img src="bank_logo.png" alt="MKC Logo" class="brand-logo">
+            <img src="images/bank_logo.png" alt="MKC Logo" class="brand-logo">
             <h2>MKC BANK</h2>
             <p>PHILIPPINES</p>
         </div>
@@ -66,24 +69,12 @@
                 </div>
             </div>
 
-            <div class="grid" style="margin-top:30px;">
-                <div class="card">
-                    <h3>MKC BANK PHILIPPINES</h3>
-                    <p> DERIVED FROM THE FAUNDERS NAMES:
-                    <p></p>
-                    >MIKE<p></p>
-                    >KARL<p.>
-                        <p>>CHRISTIAN </p>
-                        </p>
-                </div>
-                <div class="card">
+            <div class="grid" style="margin-top:30px; display: flex; justify-content: center;">
+                <div class="card" style="max-width: 500px; width: 100%;">
                     <h3>🎨 Logo & Identity</h3>
                     <p>Blue Crown & Shield — Symbolizing trust, innovation, and Filipino resilience in the new era of
                         banking.</p>
-                </div>
-                <div class="card">
-                    <h3> </h3>
-                    <p>"Building Tomorrow's Wealth, Today."</p>
+                    <p style="margin-top:15px; font-style: italic; opacity: 0.8; text-align: center;">"Building Tomorrow's Wealth, Today."</p>
                 </div>
             </div>
         </div>
@@ -347,7 +338,7 @@
                 <div class="card" style="grid-column: 1 / -1;">
                     <h3>Awards & Recognition</h3>
                     <div class="awards-flex">
-                        <img src="award1_1777435245814.png" alt="Most Promising New Bank" class="award-img">
+                        <img src="images/award1_1777435245814.png" alt="Most Promising New Bank" class="award-img">
                         <div>
                             <h4>Most Promising New Bank 2025 (BSP)</h4>
                             <p>Awarded for outstanding capitalization and rapid nationwide deployment.</p>
@@ -371,7 +362,7 @@
             <h2 class="section-title">🏅 Bank Owners & Founders</h2>
             <div class="owner-grid">
                 <div class="owner-card">
-                    <img src="owner1.jpg" alt="Mike Jason Monte" class="owner-photo">
+                    <img src="images\owner1.jpg" alt="Mike Jason Monte" class="owner-photo">
                     <h3>Mike Jason Monte</h3>
                     <div class="role">Chairman & Co-Founder</div>
                     <div class="owner-details">
@@ -384,7 +375,7 @@
                     </div>
                 </div>
                 <div class="owner-card">
-                    <img src="owner2.jpg" alt="Christian H. Balibagoso" class="owner-photo">
+                    <img src="images\owner2.jpg" alt="Christian H. Balibagoso" class="owner-photo">
                     <h3>Christian H. Balibagoso</h3>
                     <div class="role">President & Co-Founder</div>
                     <div class="owner-details">
@@ -397,7 +388,7 @@
                     </div>
                 </div>
                 <div class="owner-card">
-                    <img src="owner3.jpg" alt="KARL JOSEPH T. PALMA" class="owner-photo">
+                    <img src="images\owner3.jpg" alt="KARL JOSEPH T. PALMA" class="owner-photo">
                     <h3>KARL JOSEPH T. PALMA</h3>
                     <div class="role">CEO & Co-Founder</div>
                     <div class="owner-details">
@@ -415,54 +406,104 @@
             <h2 class="section-title">📋 Board of Directors</h2>
             <div class="director-grid">
                 <div class="director-card">
-                    <div class="director-avatar">RA</div>
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" alt="Roberto A. Alvarez" class="director-photo">
                     <h4>Roberto A. Alvarez</h4>
                     <div class="dir-role">Independent Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>30+ years in Central Banking. Expert in monetary policy and financial stability.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">ML</div>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" alt="Maria Lucia S. Tan" class="director-photo">
                     <h4>Maria Lucia S. Tan</h4>
                     <div class="dir-role">Corporate Secretary</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>Specializes in Corporate Law and Governance with focus on regulatory compliance.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">JD</div>
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop" alt="Jose David R. Cruz" class="director-photo">
                     <h4>Jose David R. Cruz</h4>
                     <div class="dir-role">Risk Management Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>Former CRO with extensive experience in credit risk and portfolio management.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">AC</div>
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" alt="Angela C. Reyes" class="director-photo">
                     <h4>Angela C. Reyes</h4>
                     <div class="dir-role">Compliance Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>Expert in AML/KYC regulations and international banking standards.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">PG</div>
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" alt="Patrick G. Santos" class="director-photo">
                     <h4>Patrick G. Santos</h4>
                     <div class="dir-role">Finance Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>Investment strategist overseeing PHP 100B+ in institutional assets.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">LS</div>
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" alt="Liza S. Mendoza" class="director-photo">
                     <h4>Liza S. Mendoza</h4>
                     <div class="dir-role">Technology Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>Cyber-security specialist with a background in AI-driven fintech solutions.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">EM</div>
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop" alt="Eduardo M. Villanueva" class="director-photo">
                     <h4>Eduardo M. Villanueva</h4>
                     <div class="dir-role">Operations Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>Expert in logistics and lean management for large-scale retail networks.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">CR</div>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" alt="Carmen R. De Leon" class="director-photo">
                     <h4>Carmen R. De Leon</h4>
                     <div class="dir-role">Marketing Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>Global brand strategist specializing in consumer behavior and digital reach.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">FT</div>
+                    <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=400&auto=format&fit=crop" alt="Francisco T. Garcia" class="director-photo">
                     <h4>Francisco T. Garcia</h4>
                     <div class="dir-role">Legal Counsel Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>Senior advocate with 25+ years in banking law and dispute resolution.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="director-card">
-                    <div class="director-avatar">SB</div>
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop" alt="Sofia B. Lim" class="director-photo">
                     <h4>Sofia B. Lim</h4>
                     <div class="dir-role">HR & Admin Director</div>
+                    <div class="director-details">
+                        <div class="director-details-inner">
+                            <p>HR strategist focused on organizational development and talent acquisition.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -509,7 +550,7 @@
                     Projected 3-Year Financial Report</h3>
 
                 <!-- Chart Container -->
-                <div class="chart-container" style="position: relative; height:300px; width:100%; margin-bottom: 30px;">
+                <div class="chart-container" style="position: relative; height:250px; width:100%; margin-bottom: 30px;">
                     <canvas id="financialChart"></canvas>
                 </div>
 
@@ -549,6 +590,12 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <button onclick="generatePDF()" class="btn-primary" style="padding: 12px 25px; border-radius: 12px; background: var(--primary); color: #fff; border: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(26, 86, 219, 0.2); display: inline-flex; align-items: center; gap: 8px;">
+                        <span>📄</span> View & Download Financial Statement
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -592,6 +639,33 @@
                         <li><strong>Card Included:</strong> EMV Visa Contactless Debit Card</li>
                     </ul>
                 </div>
+
+                <!-- Savings Estimator Card -->
+                <div class="card" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(26, 86, 219, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);">
+                    <h3>💰 Savings Interest Estimator</h3>
+                    <p>Calculate how much your money can grow with MKC Bank's 4% p.a. interest rate.</p>
+                    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: end;">
+                        <div>
+                            <label style="font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase;">Deposit Amount (₱)</label>
+                            <input type="number" id="calc-amount" value="10000" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border); margin-top: 5px; font-size: 1rem; color: var(--primary-dark); font-weight: 700;">
+                        </div>
+                        <div>
+                            <label style="font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase;">Years</label>
+                            <select id="calc-years" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border); margin-top: 5px; font-size: 1rem; color: var(--primary-dark); font-weight: 700;">
+                                <option value="1">1 Year</option>
+                                <option value="2">2 Years</option>
+                                <option value="3">3 Years</option>
+                                <option value="5">5 Years</option>
+                            </select>
+                        </div>
+                        <button onclick="calculateInterest()" style="padding: 12px; border-radius: 8px; background: var(--primary); color: #fff; border: none; font-weight: 700; cursor: pointer;">Calculate Growth</button>
+                    </div>
+                    <div id="calc-result" style="margin-top: 25px; padding: 20px; background: var(--white); border-radius: 12px; border: 1px solid var(--border); text-align: center; display: none;">
+                        <span style="font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px;">Estimated Total Balance after <span id="res-years">1</span> years:</span>
+                        <div id="res-total" style="font-size: 2rem; font-weight: 900; color: var(--primary); margin-top: 5px;">₱10,400.00</div>
+                        <div style="font-size: 0.8rem; color: #10b981; font-weight: 600; margin-top: 4px;">You earned <span id="res-interest">₱400.00</span> in interest!</div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -602,7 +676,79 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
     <script>
+        // Live Particle Background Logic
+        const canvas = document.getElementById('live-bg');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        const particleCount = 80;
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 2;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(26, 86, 219, 0.3)';
+                ctx.fill();
+            }
+        }
+
+        function createParticles() {
+            particles = [];
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach((p, index) => {
+                p.update();
+                p.draw();
+                for (let j = index + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = `rgba(26, 86, 219, ${0.15 * (1 - dist / 150)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            initCanvas();
+            createParticles();
+        });
+
+        initCanvas();
+        createParticles();
+        animate();
+
         // Financial Chart Initialization
         document.addEventListener('DOMContentLoaded', function () {
             // Chart
@@ -663,6 +809,170 @@
             document.getElementById(id).classList.add('active');
             document.getElementById('l' + id.charAt(1)).classList.add('active');
             if (window.innerWidth <= 768) { handleToggle(); }
+        }
+
+        async function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Set styles
+            const primaryColor = [26, 86, 219];
+            const secondaryColor = [30, 58, 138];
+            
+            // --- PAGE 1: OVERVIEW ---
+            // Header
+            doc.setFillColor(30, 58, 138);
+            doc.rect(0, 0, 210, 40, 'F');
+            
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(22);
+            doc.setFont("helvetica", "bold");
+            doc.text("MKC BANK PHILIPPINES, INC.", 20, 20);
+            
+            doc.setFontSize(10);
+            doc.setFont("helvetica", "normal");
+            doc.text("OFFICIAL FINANCIAL PERFORMANCE & GROWTH REPORT 2025-2027", 20, 30);
+            
+            // Executive Summary
+            doc.setTextColor(40, 40, 40);
+            doc.setFontSize(16);
+            doc.setFont("helvetica", "bold");
+            doc.text("1. Executive Summary", 20, 60);
+            
+            doc.setFontSize(11);
+            doc.setFont("helvetica", "normal");
+            doc.text([
+                "MKC Bank Philippines continues to demonstrate exceptional growth and resilience within its first years of ",
+                "operation. Established in 2025 with an initial capitalization of PHP 12 Billion, the bank has quickly ",
+                "scaled its operations nationwide, reaching 50 branches and 250,000 customers in its inaugural year.",
+                "",
+                "Our 'Digital-First' strategy has resulted in a 40% reduction in operational costs compared to traditional ",
+                "banking models, while maintaining a strong capital position well above regulatory requirements."
+            ], 20, 70);
+            
+            // Key Performance Indicators Table
+            doc.setFontSize(14);
+            doc.setFont("helvetica", "bold");
+            doc.text("Key Financial Metrics", 20, 105);
+            
+            doc.autoTable({
+                startY: 110,
+                head: [['Metric Category', '2025 Actual', '2026 Proj.', '2027 Proj.']],
+                body: [
+                    ['Net Income (PHP)', '1.2 Billion', '3.8 Billion', '7.5 Billion'],
+                    ['Total Assets (PHP)', '18.5 Billion', '32.0 Billion', '55.0 Billion'],
+                    ['Branch Network', '50 Units', '120 Units', '200 Units'],
+                    ['Active Customers', '250,000', '800,000', '2,000,000'],
+                    ['Return on Equity (ROE)', '10.5%', '14.2%', '18.5%'],
+                    ['Capital Adequacy (CAR)', '16.2%', '17.5%', '18.0%']
+                ],
+                headStyles: { fillColor: primaryColor },
+                theme: 'striped',
+                margin: { left: 20, right: 20 }
+            });
+            
+            // Growth Analysis (Using Canvas from page)
+            const canvas = document.getElementById('financialChart');
+            if (canvas) {
+                const chartImg = canvas.toDataURL('image/png', 1.0);
+                const finalY = doc.lastAutoTable.finalY || 180;
+                doc.setFontSize(14);
+                doc.setFont("helvetica", "bold");
+                doc.text("Revenue & Asset Growth Trends", 20, finalY + 15);
+                doc.addImage(chartImg, 'PNG', 20, finalY + 20, 170, 70);
+            }
+
+            // --- PAGE 2: DETAILED BREAKDOWN ---
+            doc.addPage();
+            
+            // Page 2 Header
+            doc.setFillColor(30, 58, 138);
+            doc.rect(0, 0, 210, 20, 'F');
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(12);
+            doc.text("MKC BANK | REVENUE BREAKDOWN & CSR", 20, 13);
+
+            doc.setTextColor(40, 40, 40);
+            doc.setFontSize(16);
+            doc.setFont("helvetica", "bold");
+            doc.text("2. Revenue Stream Distribution", 20, 40);
+
+            // Revenue Table
+            doc.autoTable({
+                startY: 45,
+                head: [['Revenue Segment', 'Percentage', 'Primary Driver']],
+                body: [
+                    ['Retail Banking', '45%', 'Savings, Personal Loans, CC'],
+                    ['Corporate Banking', '35%', 'Infrastructure, Trade Finance'],
+                    ['SME Lending', '15%', 'Small Business Expansion'],
+                    ['Investment & Others', '5%', 'Asset Management, Fees']
+                ],
+                headStyles: { fillColor: primaryColor },
+                margin: { left: 20, right: 20 }
+            });
+
+            // Note about the Pie Chart (Visual representation)
+            doc.setFontSize(11);
+            doc.setFont("helvetica", "italic");
+            doc.text("Note: Retail and Corporate banking account for 80% of our total revenue profile.", 20, doc.lastAutoTable.finalY + 10);
+
+            // Corporate Social Responsibility
+            const csrY = doc.lastAutoTable.finalY + 25;
+            doc.setFontSize(16);
+            doc.setFont("helvetica", "bold");
+            doc.text("3. Social Impact & Governance", 20, csrY);
+            
+            doc.setFontSize(11);
+            doc.setFont("helvetica", "normal");
+            doc.text([
+                "As a bank born in the Philippines, we are committed to national development. In 2025, our ",
+                "Financial Literacy Program reached 15 provinces, helping over 5,000 families start their ",
+                "savings journey. Our medical missions provided free consultations to 3,500 individuals."
+            ], 20, csrY + 10);
+
+            // Statement of Compliance
+            doc.setFontSize(11);
+            doc.setFont("helvetica", "bold");
+            doc.text("Regulatory Compliance Statement:", 20, csrY + 40);
+            doc.setFont("helvetica", "normal");
+            doc.text("MKC Bank Philippines remains in full compliance with the Manual of Regulations for Banks (MORB).", 20, csrY + 46);
+            
+            // Footer & Signatures
+            doc.setFontSize(10);
+            doc.setTextColor(100, 100, 100);
+            doc.text("__________________________", 20, 250);
+            doc.text("Mike Jason Monte", 20, 255);
+            doc.text("Chairman & Co-Founder", 20, 260);
+            
+            doc.text("__________________________", 120, 250);
+            doc.text("Certified by Board of Directors", 120, 255);
+            doc.text("MKC Bank Philippines, Inc.", 120, 260);
+            
+            doc.setFontSize(8);
+            doc.text("Generated on: " + new Date().toLocaleDateString() + " | Internal Reference: MKC-FIN-2025", 20, 285);
+            doc.text("Page 2 of 2", 185, 285);
+            
+            // Open in new tab for viewing
+            window.open(doc.output('bloburl'), '_blank');
+        }
+
+        function calculateInterest() {
+            const amount = parseFloat(document.getElementById('calc-amount').value);
+            const years = parseInt(document.getElementById('calc-years').value);
+            const rate = 0.04; // 4% p.a.
+            
+            if (isNaN(amount) || amount <= 0) return;
+            
+            // Compound Interest Formula: A = P(1 + r)^t
+            const total = amount * Math.pow((1 + rate), years);
+            const interest = total - amount;
+            
+            document.getElementById('res-years').textContent = years;
+            document.getElementById('res-total').textContent = '₱' + total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('res-interest').textContent = '₱' + interest.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            
+            document.getElementById('calc-result').style.display = 'block';
+            document.getElementById('calc-result').style.animation = 'fadeIn 0.5s ease forwards';
         }
     </script>
 </body>
