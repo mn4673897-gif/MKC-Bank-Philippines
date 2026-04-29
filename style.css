@@ -845,11 +845,12 @@ tbody tr:hover {
 }
 
 .award-img {
-    object-fit: contain;
+    object-fit: cover;
     background: #fff;
-    padding: 8px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid var(--border);
 }
 
 .award-icon {
@@ -890,6 +891,20 @@ tbody tr:hover {
     
     .awards-container {
         grid-template-columns: 1fr;
+    }
+
+    .award-img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin-bottom: 10px;
+    }
+
+    .award-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
     }
 }
 
