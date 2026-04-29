@@ -11,11 +11,16 @@
 </head>
 
 <body>
+    <!-- Animated Background Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
 
     <button class="master-toggle" onclick="handleToggle()">☰</button>
 
     <nav id="sidebar">
         <div class="brand-section">
+            <img src="images/bank_logo.png" alt="MKC Logo" class="brand-logo">
             <h2>MKC BANK</h2>
             <p>PHILIPPINES</p>
         </div>
@@ -27,6 +32,7 @@
             <li><a onclick="switchView('v3')" id="l3"><span class="icon">🌍</span><span>Operations</span></a></li>
             <li><a onclick="switchView('v4')" id="l4"><span class="icon">👔</span><span>Leadership</span></a></li>
             <li><a onclick="switchView('v5')" id="l5"><span class="icon">📈</span><span>Performance</span></a></li>
+            <li><a onclick="switchView('v6')" id="l6"><span class="icon">📘</span><span>Account Guide</span></a></li>
         </ul>
     </nav>
 
@@ -37,10 +43,8 @@
             <div class="hero">
                 <span class="hero-badge">🏦 EST. 2025 — NEW GENERATION BANKING</span>
                 <h1>MKC Bank Philippines, Inc.</h1>
-                <p>Welcome to MKC Bank — a bold, new-generation universal bank built from the ground up to redefine
-                    Filipino banking. Founded by three visionary entrepreneurs, MKC Bank combines cutting-edge digital
-                    technology with a deep commitment to community empowerment, financial inclusion, and world-class
-                    service. We are not just a bank — we are the future of Philippine finance.</p>
+                <p> "Banking that truly cares for you."</p>
+
             </div>
 
             <div class="stats-row">
@@ -64,8 +68,13 @@
 
             <div class="grid" style="margin-top:30px;">
                 <div class="card">
-                    <h3>🏷️ Company Name</h3>
-                    <p>MKC Bank Philippines, Inc.</p>
+                    <h3>MKC BANK PHILIPPINES</h3>
+                    <p> DERIVED FROM THE FAUNDERS NAMES:
+                    <p></p>
+                    >MIKE<p></p>
+                    >KARL<p.>
+                        <p>>CHRISTIAN </p>
+                        </p>
                 </div>
                 <div class="card">
                     <h3>🎨 Logo & Identity</h3>
@@ -73,7 +82,7 @@
                         banking.</p>
                 </div>
                 <div class="card">
-                    <h3>💬 Tagline</h3>
+                    <h3> </h3>
                     <p>"Building Tomorrow's Wealth, Today."</p>
                 </div>
             </div>
@@ -89,23 +98,23 @@
             </div>
 
             <div class="card" style="margin-top:25px;">
-                <h3>(d) History & Background</h3>
+                <h3> History & Background</h3>
                 <p>MKC Bank Philippines, Inc. was established in 2025 by three young and ambitious Filipino
                     entrepreneurs — Mike Jason Monte, Christian H. Balibagoso, and Christian H. Balibagoso — who shared
                     a common vision: to build a bank that truly serves the modern Filipino. Headquartered in Makati
                     City, the bank launched with an initial capitalization of ₱12 Billion and quickly gained BSP
                     approval as a Universal Bank. Within its first year, MKC Bank opened 50 branches across Luzon,
-                    Visayas, and Mindanao, with aggressive expansion plans to reach 200 branches by 2028.</p>
+                    Visayas, and Mindanao, with aggressive expansion plans to reach more branches by 2028.</p>
             </div>
 
             <div class="grid">
                 <div class="card">
-                    <h3>(e) Subsidiaries</h3>
+                    <h3> Subsidiaries</h3>
                     <p>MKC Capital Markets Corp., MKC Digital Pay Inc., MKC Insurance Holdings, MKC Micro-Lending Corp.
                     </p>
                 </div>
                 <div class="card">
-                    <h3>(f) Vision</h3>
+                    <h3>Vision</h3>
                     <p>To become the Philippines' most innovative and trusted bank, empowering every Filipino family to
                         achieve financial freedom through technology-driven solutions.</p>
                 </div>
@@ -127,27 +136,225 @@
 
             <div class="grid">
                 <div class="card">
-                    <h3>(g) Branches</h3>
-                    <p>50+ branches across Luzon, Visayas, and Mindanao with plans to reach 200 by 2028.</p>
+                    <h3>📍 Nationwide Branches</h3>
+                    <div class="branch-scroll-container">
+                        <div class="branch-region">
+                            <h4>Luzon (25 Branches)</h4>
+                            <div class="branch-item">
+                                <p><strong>Makati Head Office:</strong> 123 Ayala Ave, Makati City<br>Contact: (02)
+                                    888-1234</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Makati (Salcedo):</strong> Valero St, Salcedo Village<br>Contact: (02)
+                                    888-1235</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>BGC Branch:</strong> 32nd St, Taguig City<br>Contact: (02) 888-9101</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Ortigas Center:</strong> Emerald Ave, Pasig City<br>Contact: (02) 888-9102
+                                </p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Binondo Branch:</strong> 45 Escolta St, Manila<br>Contact: (02) 888-5678</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Manila (Ermita):</strong> Roxas Blvd, Ermita<br>Contact: (02) 888-5679</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Quezon City:</strong> Tomas Morato Ave, QC<br>Contact: (02) 888-2345</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>QC (Eastwood):</strong> Eastwood City Cyberpark<br>Contact: (02) 888-2346</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>San Juan (Greenhills):</strong> Ortigas Ave, Greenhills<br>Contact: (02)
+                                    888-2347</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Mandaluyong:</strong> Shaw Boulevard<br>Contact: (02) 888-2348</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Pasay (MOA):</strong> Mall of Asia Complex<br>Contact: (02) 888-2349</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Alabang:</strong> Madrigal Business Park, Muntinlupa<br>Contact: (02)
+                                    888-2350</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Las Piñas:</strong> Alabang-Zapote Road<br>Contact: (02) 888-2351</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Caloocan:</strong> EDSA Monumento<br>Contact: (02) 888-2352</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Valenzuela:</strong> MacArthur Highway<br>Contact: (02) 888-2353</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Antipolo:</strong> Sumulong Highway, Rizal<br>Contact: (02) 888-2354</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Cavite (Dasmariñas):</strong> Aguinaldo Highway<br>Contact: (046) 416-0001
+                                </p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Laguna (Sta. Rosa):</strong> Nuvali Blvd<br>Contact: (049) 530-0002</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Batangas City:</strong> P. Burgos St<br>Contact: (043) 723-0003</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Lucena City:</strong> Quezon Ave<br>Contact: (042) 710-0004</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Pampanga:</strong> Clark Freeport Zone<br>Contact: (045) 599-2222</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Tarlac City:</strong> F. Tañedo St<br>Contact: (045) 982-0005</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Baguio City:</strong> Session Road<br>Contact: (074) 442-1111</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Dagupan City:</strong> A.B. Fernandez Ave<br>Contact: (075) 522-0006</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Naga City:</strong> Elias Angeles St<br>Contact: (054) 473-0007</p>
+                            </div>
+                        </div>
+                        <div class="branch-region">
+                            <h4>Visayas (12 Branches)</h4>
+                            <div class="branch-item">
+                                <p><strong>Cebu IT Park:</strong> Apas, Cebu City<br>Contact: (032) 412-9001</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Cebu City (Fuente):</strong> Osmeña Blvd<br>Contact: (032) 412-9002</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Mandaue City:</strong> A.S. Fortuna St<br>Contact: (032) 412-9003</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Lapu-Lapu City:</strong> Mactan Marina Mall<br>Contact: (032) 412-9004</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Iloilo City:</strong> Megaworld Blvd, Mandurriao<br>Contact: (033) 321-4567
+                                </p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Bacolod City:</strong> Lacson Street<br>Contact: (034) 433-8888</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Dumaguete:</strong> Rizal Boulevard<br>Contact: (035) 225-9999</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Tacloban:</strong> Real Street<br>Contact: (053) 321-0000</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Roxas City:</strong> Roxas Avenue<br>Contact: (036) 621-0001</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Ormoc City:</strong> Real Street<br>Contact: (053) 561-0002</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Tagbilaran City:</strong> CPG Avenue, Bohol<br>Contact: (038) 411-0003</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Kalibo:</strong> Pastrana St, Aklan<br>Contact: (036) 268-0004</p>
+                            </div>
+                        </div>
+                        <div class="branch-region">
+                            <h4>Mindanao (13 Branches)</h4>
+                            <div class="branch-item">
+                                <p><strong>Davao City:</strong> SM Lanang Premier<br>Contact: (082) 221-3456</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Cagayan de Oro:</strong> Limketkai Center<br>Contact: (088) 856-7890</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Zamboanga:</strong> Mayor Jaldon St<br>Contact: (062) 991-2222</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>General Santos:</strong> Pioneer Ave<br>Contact: (083) 552-3333</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Butuan City:</strong> JC Aquino Ave<br>Contact: (085) 341-4444</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Iligan City:</strong> Quezon Avenue<br>Contact: (063) 221-0001</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Tagum City:</strong> Pioneer Avenue<br>Contact: (084) 216-0002</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Digos City:</strong> Rizal Avenue<br>Contact: (082) 553-0003</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Cotabato City:</strong> Sinsuat Avenue<br>Contact: (064) 421-0004</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Pagadian City:</strong> Rizal Avenue<br>Contact: (062) 214-0005</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Surigao City:</strong> San Nicolas St<br>Contact: (086) 826-0006</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Dipolog City:</strong> General Luna St<br>Contact: (065) 212-0007</p>
+                            </div>
+                            <div class="branch-item">
+                                <p><strong>Koronadal City:</strong> Gensan Drive<br>Contact: (083) 228-0008</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3>(h) Scope of Banking</h3>
+                    <h3>Scope of Banking</h3>
                     <p>Universal Banking — Retail, Commercial, SME, Digital, and Investment Banking services.</p>
                 </div>
-                <div class="card">
-                    <h3>(i) Products & Services</h3>
-                    <p>Savings & Checking Accounts, Personal & Business Loans, Credit Cards, Mobile Banking (MKC App),
-                        Insurance, Investments, Remittance Services.</p>
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3>Products & Services - How it works</h3>
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <h4>💰 Savings & Checking</h4>
+                            <p><strong>What it's for:</strong> Securely store your money while earning competitive
+                                interest.<br><strong>How it works:</strong> Deposit funds anytime, access via ATM or
+                                App, and monitor growth.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>💳 Credit Cards & Loans</h4>
+                            <p><strong>What it's for:</strong> Financial flexibility for personal or business
+                                needs.<br><strong>How it works:</strong> Apply with minimum requirements, get approved
+                                fast, and pay in flexible installments.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>📱 Mobile Banking (MKC App)</h4>
+                            <p><strong>What it's for:</strong> 24/7 bank access in your pocket.<br><strong>How it
+                                    works:</strong> Download the app, link your account, and instantly pay bills,
+                                transfer funds, or invest.</p>
+                        </div>
+                        <div class="service-item">
+                            <h4>🛡️ Insurance & Investments</h4>
+                            <p><strong>What it's for:</strong> Protect your family's future and grow your
+                                wealth.<br><strong>How it works:</strong> Consult our advisors, choose a curated
+                                portfolio, and watch your assets compound.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3>(j) Total Assets</h3>
+                    <h3>Total Assets</h3>
                     <p>₱18.5 Billion in total assets (2025) — growing rapidly through strategic partnerships and digital
                         innovation.</p>
                 </div>
-                <div class="card">
-                    <h3>(k) Awards & Recognition</h3>
-                    <p>Most Promising New Bank 2025 (BSP), Digital Innovation Award 2025 (FinTech PH), Best New Banking
-                        App 2025.</p>
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3>Awards & Recognition</h3>
+                    <div class="awards-flex">
+                        <img src="images/award1_1777435245814.png" alt="Most Promising New Bank" class="award-img">
+                        <div>
+                            <h4>Most Promising New Bank 2025 (BSP)</h4>
+                            <p>Awarded for outstanding capitalization and rapid nationwide deployment.</p>
+                            <h4 style="margin-top:10px;">Digital Innovation Award 2025 (FinTech PH)</h4>
+                            <p>Recognized for the cutting-edge MKC Mobile App UI and security.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,19 +371,43 @@
             <h2 class="section-title">🏅 Bank Owners & Founders</h2>
             <div class="owner-grid">
                 <div class="owner-card">
-                    <img src="owner1.jpg" alt="Mike Jason Monte" class="owner-photo">
+                    <img src="images\owner1.jpg" alt="Mike Jason Monte" class="owner-photo">
                     <h3>Mike Jason Monte</h3>
                     <div class="role">Chairman & Co-Founder</div>
+                    <div class="owner-details">
+                        <div class="owner-details-inner">
+                            <h4>Achievements & Skills</h4>
+                            <p><strong>Skills:</strong> Strategic Planning, Corporate Finance,
+                                Leadership<br><strong>Achievements:</strong> Ex-VP of Top Global Bank, Harvard MBA,
+                                FinTech Pioneer.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="owner-card">
-                    <img src="owner2.jpg" alt="Christian H. Balibagoso" class="owner-photo">
+                    <img src="images\owner2.jpg" alt="Christian H. Balibagoso" class="owner-photo">
                     <h3>Christian H. Balibagoso</h3>
                     <div class="role">President & Co-Founder</div>
+                    <div class="owner-details">
+                        <div class="owner-details-inner">
+                            <h4>Achievements & Skills</h4>
+                            <p><strong>Skills:</strong> Operations Management, Risk Assessment, Retail
+                                Banking<br><strong>Achievements:</strong> Scaled 3 tech startups, Awarded 'Young Banker
+                                of the Year' 2023.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="owner-card">
-                    <img src="owner3.jpg" alt="KARL JOSEPH T. PALMA" class="owner-photo">
+                    <img src="images\owner3.jpg" alt="KARL JOSEPH T. PALMA" class="owner-photo">
                     <h3>KARL JOSEPH T. PALMA</h3>
                     <div class="role">CEO & Co-Founder</div>
+                    <div class="owner-details">
+                        <div class="owner-details-inner">
+                            <h4>Achievements & Skills</h4>
+                            <p><strong>Skills:</strong> Digital Transformation, AI Integration, Product
+                                Vision<br><strong>Achievements:</strong> Designed the award-winning MKC App, Forbes 30
+                                Under 30 Finance.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -237,12 +468,12 @@
 
             <div class="grid" style="margin-top:30px;">
                 <div class="card">
-                    <h3>(l) Organizational Structure</h3>
+                    <h3>Organizational Structure</h3>
                     <p>Modern flat-matrix governance model promoting agile decision-making, transparency, and
                         accountability across all divisions.</p>
                 </div>
                 <div class="card">
-                    <h3>(o) Capital Adequacy Ratio</h3>
+                    <h3>Capital Adequacy Ratio</h3>
                     <p>16.2% CAR — well above the BSP minimum requirement of 10%, ensuring financial stability and
                         depositor confidence.</p>
                 </div>
@@ -258,15 +489,30 @@
             </div>
 
             <div class="card" style="margin-top:25px;">
-                <h3>(q) CSR Initiatives</h3>
-                <p>1. Financial Literacy Programs for underserved communities 2. SME Startup Grants 3. Clean Water
-                    Projects 4. Reforestation Drives 5. Free Medical Missions in rural areas</p>
+                <h3>CSR Initiatives - Making an Impact</h3>
+                <p>We believe in giving back to the community through various active initiatives across the country.</p>
+                <div class="csr-grid">
+                    <div class="csr-item">
+                        <img src="images\Screenshot 2026-04-29 135555.png" alt="Financial Literacy">
+                        <p>Financial Literacy Programs</p>
+                    </div>
+                    <div class="csr-item">
+                        <img src="images\Screenshot 2026-04-29 135535.png" alt="Medical Missions">
+                        <p>Free Medical Missions</p>
+                    </div>
+                </div>
             </div>
 
             <div class="table-box">
                 <h3
                     style="color:var(--primary);margin-bottom:15px;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">
-                    (r) Projected 3-Year Financial Report</h3>
+                    Projected 3-Year Financial Report</h3>
+
+                <!-- Chart Container -->
+                <div class="chart-container" style="position: relative; height:300px; width:100%; margin-bottom: 30px;">
+                    <canvas id="financialChart"></canvas>
+                </div>
+
                 <table>
                     <thead>
                         <tr>
@@ -306,13 +552,106 @@
             </div>
         </div>
 
+        <!-- ===== VIEW 6: ACCOUNT GUIDE ===== -->
+        <div id="v6" class="view">
+            <div class="hero">
+                <span class="hero-badge">📘 ACCOUNT GUIDE</span>
+                <h1>How to Open a Basic Bank Account</h1>
+                <p>Everything you need to know to start your financial journey with MKC Bank.</p>
+            </div>
+
+            <div class="card" style="margin-top:25px;">
+                <h3>Step-by-Step Guide</h3>
+                <ol style="margin-left:20px; line-height:1.8; color:var(--text-light); margin-top:10px;">
+                    <li><strong>Prepare Requirements:</strong> Gather all necessary documents (listed below).</li>
+                    <li><strong>Visit a Branch or Apply Online:</strong> Use the MKC Mobile App for a 5-minute digital
+                        onboarding, or visit any of our 50+ branches nationwide.</li>
+                    <li><strong>Fill Out Forms:</strong> Complete the Customer Information File (CIF) and account
+                        opening forms.</li>
+                    <li><strong>Initial Deposit:</strong> Fund your account with the minimum initial deposit.</li>
+                    <li><strong>Receive Your Card:</strong> Get your Visa Debit Card instantly at the branch or
+                        delivered to your home within 3-5 days.</li>
+                </ol>
+            </div>
+
+            <div class="grid" style="margin-top:25px;">
+                <div class="card">
+                    <h3>Document Requirements</h3>
+                    <ul style="margin-left:20px; line-height:1.8; color:var(--text-light); margin-top:10px;">
+                        <li>At least one (1) valid Primary ID (e.g., Passport, UMID, Driver's License, PhilID).</li>
+                        <li>Proof of Billing Address (e.g., Electric bill, Water bill).</li>
+                        <li>1x1 or 2x2 ID Picture (if applying in branch).</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Basic Account Features</h3>
+                    <ul style="margin-left:20px; line-height:1.8; color:var(--text-light); margin-top:10px;">
+                        <li><strong>Initial Deposit:</strong> ₱500 only</li>
+                        <li><strong>Maintaining Balance:</strong> ₱500</li>
+                        <li><strong>Interest Rate:</strong> 4.0% p.a. (promotional rate for 2025)</li>
+                        <li><strong>Card Included:</strong> EMV Visa Contactless Debit Card</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="footer-note">
             &copy; 2025 MKC Bank Philippines, Inc. — BSBA 2A | All Rights Reserved
         </div>
 
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+        // Financial Chart Initialization
+        document.addEventListener('DOMContentLoaded', function () {
+            // Chart
+            const ctx = document.getElementById('financialChart');
+            if (ctx) {
+                new Chart(ctx.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['2025', '2026 (Proj.)', '2027 (Proj.)'],
+                        datasets: [
+                            {
+                                label: 'Net Income (₱ Billions)',
+                                data: [1.2, 3.8, 7.5],
+                                backgroundColor: '#0ea5e9',
+                                borderRadius: 6
+                            },
+                            {
+                                label: 'Total Assets (₱ Billions)',
+                                data: [18.5, 32, 55],
+                                backgroundColor: '#1e3a8a',
+                                borderRadius: 6
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Mouse Tracking Spotlight Effect
+            const cards = document.querySelectorAll('.card, .owner-card, .stat-card, .service-item');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+        });
+
         function handleToggle() {
             const nav = document.getElementById('sidebar'), main = document.getElementById('main');
             if (window.innerWidth <= 768) { nav.classList.toggle('active'); }
