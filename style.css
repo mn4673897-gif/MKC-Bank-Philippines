@@ -31,13 +31,16 @@ img {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg);
 }
+
 ::-webkit-scrollbar-thumb {
     background: rgba(26, 86, 219, 0.4);
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
 }
@@ -72,6 +75,7 @@ body {
     opacity: 0.6;
     animation: float 20s infinite ease-in-out alternate;
 }
+
 .orb-1 {
     width: 400px;
     height: 400px;
@@ -79,6 +83,7 @@ body {
     top: -10%;
     left: -10%;
 }
+
 .orb-2 {
     width: 500px;
     height: 500px;
@@ -88,6 +93,7 @@ body {
     animation-delay: -5s;
     animation-duration: 25s;
 }
+
 .orb-3 {
     width: 300px;
     height: 300px;
@@ -99,9 +105,17 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(100px, 50px) scale(1.1); }
-    100% { transform: translate(-50px, 100px) scale(0.9); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(100px, 50px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-50px, 100px) scale(0.9);
+    }
 }
 
 /* SIDEBAR */
@@ -237,9 +251,17 @@ nav {
 }
 
 @keyframes bounceIcon {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .icon {
@@ -295,9 +317,17 @@ main {
 }
 
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero::before {
@@ -383,23 +413,28 @@ main {
 .card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
     z-index: 0;
 }
 
 /* MOUSE TRACKING SPOTLIGHT EFFECT */
-.card::after, .owner-card::after {
+.card::after,
+.owner-card::after {
     content: "";
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(
-        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-        rgba(255, 255, 255, 0.4),
-        transparent 40%
-    );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(255, 255, 255, 0.4),
+            transparent 40%);
     z-index: 0;
     opacity: 0;
     transition: opacity 0.5s;
@@ -407,11 +442,13 @@ main {
     border-radius: inherit;
 }
 
-.card:hover::after, .owner-card:hover::after {
+.card:hover::after,
+.owner-card:hover::after {
     opacity: 1;
 }
 
-.card > *, .owner-card > * {
+.card>*,
+.owner-card>* {
     position: relative;
     z-index: 2;
 }
@@ -423,17 +460,35 @@ main {
 }
 
 /* STAGGERED ENTRANCE ANIMATION */
-.view.active .card, .view.active .owner-card {
+.view.active .card,
+.view.active .owner-card {
     animation: slideUpFade 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     opacity: 0;
     transform: translateY(30px);
 }
 
-.view.active .card:nth-child(1), .view.active .owner-card:nth-child(1) { animation-delay: 0.1s; }
-.view.active .card:nth-child(2), .view.active .owner-card:nth-child(2) { animation-delay: 0.2s; }
-.view.active .card:nth-child(3), .view.active .owner-card:nth-child(3) { animation-delay: 0.3s; }
-.view.active .card:nth-child(4) { animation-delay: 0.4s; }
-.view.active .card:nth-child(5) { animation-delay: 0.5s; }
+.view.active .card:nth-child(1),
+.view.active .owner-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.view.active .card:nth-child(2),
+.view.active .owner-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.view.active .card:nth-child(3),
+.view.active .owner-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.view.active .card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.view.active .card:nth-child(5) {
+    animation-delay: 0.5s;
+}
 
 @keyframes slideUpFade {
     to {
@@ -695,6 +750,7 @@ tbody tr:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease;
 }
+
 .stat-card:hover {
     transform: translateY(-5px);
 }
@@ -738,10 +794,12 @@ tbody tr:hover {
 .branch-scroll-container::-webkit-scrollbar {
     width: 6px;
 }
+
 .branch-scroll-container::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
+
 .branch-scroll-container::-webkit-scrollbar-thumb {
     background: var(--primary);
     border-radius: 10px;
@@ -835,7 +893,8 @@ tbody tr:hover {
     box-shadow: var(--shadow);
 }
 
-.award-img, .award-icon {
+.award-img,
+.award-icon {
     width: 60px;
     height: 60px;
     flex-shrink: 0;
@@ -849,7 +908,7 @@ tbody tr:hover {
     background: #fff;
     padding: 5px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--border);
 }
 
@@ -888,7 +947,7 @@ tbody tr:hover {
         text-align: center;
         padding: 25px;
     }
-    
+
     .awards-container {
         grid-template-columns: 1fr;
     }
@@ -972,7 +1031,7 @@ tbody tr:hover {
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--border);
 }
@@ -992,11 +1051,11 @@ tbody tr:hover {
     .csr-item img {
         height: 180px;
     }
-    
+
     .chart-container {
         height: 180px !important;
     }
-    
+
     .director-photo {
         width: 100px;
         height: 100px;
@@ -1012,18 +1071,19 @@ tbody tr:hover {
     .chart-container {
         height: 150px !important;
     }
-    
+
     .director-photo {
         width: 80px;
         height: 80px;
     }
-    
+
     .owner-photo {
         width: 90px;
         height: 90px;
     }
 
-    table th, table td {
+    table th,
+    table td {
         padding: 10px 8px;
         font-size: 0.75rem;
     }
@@ -1033,7 +1093,7 @@ tbody tr:hover {
 .org-chart-container {
     padding: 40px;
     margin-top: 20px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.4) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
     text-align: center;
 }
 
@@ -1102,10 +1162,21 @@ tbody tr:hover {
     opacity: 0.6;
 }
 
-.level-1 { border-left: 4px solid #1e3a8a; }
-.level-2 { border-left: 4px solid #1a56db; }
-.level-3 { border-left: 4px solid #3b82f6; }
-.level-4 { border-left: 4px solid #0ea5e9; }
+.level-1 {
+    border-left: 4px solid #1e3a8a;
+}
+
+.level-2 {
+    border-left: 4px solid #1a56db;
+}
+
+.level-3 {
+    border-left: 4px solid #3b82f6;
+}
+
+.level-4 {
+    border-left: 4px solid #0ea5e9;
+}
 
 .workforce-stats {
     margin-top: 40px;
@@ -1146,8 +1217,14 @@ tbody tr:hover {
         flex-direction: column;
         gap: 15px;
     }
-    .org-grid-level::before { display: none; }
-    .org-chart-container { padding: 20px; }
+
+    .org-grid-level::before {
+        display: none;
+    }
+
+    .org-chart-container {
+        padding: 20px;
+    }
 }
 
 /* MOBILE OPTIMIZATIONS FOR OPERATIONS */
@@ -1169,7 +1246,7 @@ tbody tr:hover {
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
     }
-    
+
     .branch-tabs::-webkit-scrollbar {
         display: none;
     }
@@ -1186,7 +1263,7 @@ tbody tr:hover {
         font-weight: 700;
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
     }
 
     .branch-tab.active {
@@ -1207,8 +1284,15 @@ tbody tr:hover {
     }
 
     @keyframes slideInUp {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .branch-item {
@@ -1223,11 +1307,11 @@ tbody tr:hover {
         max-height: 450px;
         padding-bottom: 20px;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .service-item {
         padding: 24px;
         border-left: 4px solid var(--primary);
@@ -1253,7 +1337,8 @@ tbody tr:hover {
         font-size: 1.2rem;
     }
 
-    .owner-grid, .director-grid {
+    .owner-grid,
+    .director-grid {
         grid-template-columns: 1fr !important;
     }
 }
@@ -1263,15 +1348,15 @@ tbody tr:hover {
     .branch-item p {
         font-size: 0.8rem;
     }
-    
+
     .branch-region h4 {
         font-size: 0.9rem;
     }
-    
+
     .stat-card {
         padding: 16px;
     }
-    
+
     .stat-card .stat-num {
         font-size: 1.4rem;
     }
